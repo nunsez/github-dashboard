@@ -17,10 +17,6 @@ parserOptions:
   ecmaVersion: 12
   sourceType: module
 
-jsx-runtime:
-  plugins:
-    - react
-
 ignorePatterns:
   - node_modules
   - dist
@@ -30,7 +26,9 @@ plugins:
   - '@typescript-eslint'
 
 rules:
+  max-len: [error, code: 100]
   indent: [error, 4]
   linebreak-style: [error, unix]
   quotes: [error, single]
   semi: [error, never]
+  react/react-in-jsx-scope: off
